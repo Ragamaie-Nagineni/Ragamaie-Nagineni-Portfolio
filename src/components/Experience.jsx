@@ -1,21 +1,35 @@
-// src/components/Experience.jsx
 import { FaBriefcase } from "react-icons/fa";
+
 export default function Experience() {
   return (
     <section id="experience">
-      <h2><FaBriefcase /> Experience</h2>
-      <div className="container">
-      
-      <div>
-        <h3>Web Development Trainee (Dec 2023 – Jan 2024)</h3>
-        <p>Industrial training in full stack development at Edu-versity Training Institute.</p>
+      <h2><FaBriefcase /> Experience & Involvement</h2>
+
+      <div className="container job">
+        <h3>Web Development Trainee</h3>
+        <p><b>Edu-versity Training Institute</b> | Dec 2023 – Jan 2024</p>
+
         <ul>
-          <li>Completed intensive industrial training in full-stack web development, covering HTML, CSS, JavaScript, React, Node.js, and databases.</li>
-          <li>Developed responsive and user-friendly web applications using modern frameworks and best coding practices.</li>
-          <li>Gained practical exposure to deployment, version control (Git/GitHub), and debugging techniques.</li>
+          <li>Completed an intensive industrial program focused on full-stack web development</li>
+          <li>Hands-on learning with HTML, CSS, JavaScript, Node.js, Express, MongoDB, and React</li>
+          <li>Developed responsive UI components, backend routes, and basic authentication models</li>
+          <li>Worked on mini projects, debugging & deployment practices with Git/GitHub</li>
+          <li>Strengthened real-world development workflow through assignment-based learning</li>
         </ul>
       </div>
+
+      <div className="card job">
+        <h3>PR Core Member</h3>
+        <p><b>Epoch Club, IIIT Sri City</b> | Aug 2024 – Apr 2025</p>
+
+        <ul>
+          <li>Organized college hackathons, workshops & technical events improving participation</li>
+          <li>Handled event coordination, promotions & social media outreach strategies</li>
+          <li>Collaborated with team members for content, branding & operational planning</li>
+          <li>Improved communication, leadership & strategic execution through real experience</li>
+        </ul>
       </div>
+
     </section>
   );
 }
