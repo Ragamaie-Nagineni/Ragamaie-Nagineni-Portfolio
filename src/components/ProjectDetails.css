@@ -1,49 +1,49 @@
 #project-details {
-  padding: 80px 10%;
+  padding: 90px 10%;
+  background: #0b0f19;
+  color: #e4e6eb;
 }
 
 #project-details h2 {
-  color: #0046c7;
-  font-size: 32px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-#project-details p {
-  margin-bottom: 16px;
-  line-height: 1.7;
+  color: #c8d4ff;
 }
 
 #project-details h3 {
-  margin-top: 25px;
+  margin-top: 30px;
   margin-bottom: 10px;
-  font-size: 22px;
-  color: #003a90;
+  color: #9bb3ff;
 }
 
 .detail-badges {
-  margin: 12px 0 25px;
   display: flex;
-  gap: 10px;
   flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
 }
 
 .badge {
-  background: #e5edff;
-  border: 1px solid #bcd0ff;
+  background: #232a47;
   padding: 6px 12px;
+  color: #cbd3ff;
   border-radius: 6px;
-  font-size: 14px;
+  border: 1px solid #3b4264;
 }
 
 .project-link {
   display: inline-block;
-  margin-top: 12px;
-  color: #0046c7;
+  margin-top: 15px;
+  color: #8fa3ff;
   font-weight: 600;
   text-decoration: none;
 }
 
 .project-link:hover {
-  text-decoration: underline;
+  color: #cdd7ff;
+  transform: translateX(4px);
+}
+
+.overview-text {
+  line-height: 1.8;
+  margin-bottom: 20px;
+  white-space: pre-line; /* allows multi-paragraph formatting */
 }

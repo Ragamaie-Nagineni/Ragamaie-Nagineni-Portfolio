@@ -1,19 +1,22 @@
+/* src/components/Projects.css */
+
 #projects {
-  background: #0d1224;
+  background: #0b0f19;
   color: white;
 }
 
 #projects h2 {
-  color: white;
+  color: #c8d4ff;
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   gap: 28px;
   margin-top: 40px;
 }
 
+/* Project Card */
 .project-card {
   background: #161b31;
   padding: 28px;
@@ -27,17 +30,44 @@
   box-shadow: 0 0 20px rgba(120, 160, 255, 0.25);
 }
 
+/* Headings inside card */
 .project-card h3 {
   font-size: 22px;
   margin-bottom: 10px;
+  color: #dce2ff;
 }
 
-.project-card .description {
+.project-card h4 {
+  margin-top: 18px;
+  margin-bottom: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #9bb3ff;
+}
+
+.description {
   opacity: 0.85;
-  margin-bottom: 18px;
+  line-height: 1.6;
 }
 
+/* Feature list */
+.feature-list li {
+  margin: 6px 0;
+  padding-left: 18px;
+  position: relative;
+}
+
+.feature-list li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: #6f8cff;
+}
+
+/* Tech badges */
 .tech-stack {
+  margin-top: 10px;
   margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -50,8 +80,10 @@
   border-radius: 6px;
   font-size: 13px;
   border: 1px solid #3b4264;
+  color: #cbd3ff;
 }
 
+/* Button */
 .project-link {
   color: #9bb3ff;
   text-decoration: none;
