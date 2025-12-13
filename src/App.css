@@ -192,6 +192,85 @@ ul li::before {
   border: 1px solid #3b4264;
 }
 
+/* ================== RESUME SECTION ================== */
+
+.resume-box {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  background: #161b31;
+  padding: 40px 30px;
+  border-radius: 16px;
+  border: 1px solid #262c45;
+}
+
+.resume-box h3 {
+  color: #dce2ff;
+  margin-bottom: 12px;
+  font-size: 22px;
+}
+
+.resume-box p {
+  margin-bottom: 22px;
+  color: #cfd3ff;
+}
+
+.resume-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #4d6bff, #6f8cff);
+  color: #0b0f19;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.resume-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(100, 130, 255, 0.4);
+}
+
+/* ================== CONTACT SECTION ================== */
+
+.contact-box {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  background: #161b31;
+  padding: 40px 30px;
+  border-radius: 16px;
+  border: 1px solid #262c45;
+}
+
+.contact-box p {
+  margin-bottom: 25px;
+  color: #cfd3ff;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-links a {
+  color: #9bb3ff;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.contact-links a:hover {
+  color: #cdd7ff;
+  transform: translateY(-2px);
+}
+
+
 /* ================== FOOTER ================== */
 footer {
   width: 100%;
