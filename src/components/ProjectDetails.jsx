@@ -1,10 +1,30 @@
 // src/components/ProjectDetails.jsx
 
-import { useParams } from "react-router-dom";
+import { useEffect, useRef } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import "./ProjectDetails.css";
 
 export default function ProjectDetails() {
   const { id } = useParams();
+  const navigate = useNavigate();
+  const sectionsRef = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-visible");
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    sectionsRef.current.forEach((el) => el && observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
 
   const projectData = {
     "cloud-storage": {
@@ -104,11 +124,21 @@ compared to the classical ACO algorithm.
 
   return (
     <section id="project-details">
-      <h2>{data.title}</h2>
+      {/* Back navigation */}
+      <button className="back-btn" onClick={() => navigate("/#projects")}>
+        ← Back to Projects
+      </button>
+
+      <h2 ref={(el) => (sectionsRef.current[0] = el)} className="reveal">
+        {data.title}
+      </h2>
 
       <div className="project-layout">
-        {/* LEFT COLUMN */}
-        <div className="project-main">
+        {/* LEFT */}
+        <div
+          className="project-main reveal"
+          ref={(el) => (sectionsRef.current[1] = el)}
+        >
           <h3>Overview</h3>
           <p className="overview-text">{data.overview}</p>
 
@@ -120,8 +150,11 @@ compared to the classical ACO algorithm.
           </ul>
         </div>
 
-        {/* RIGHT COLUMN */}
-        <div className="project-side">
+        {/* RIGHT */}
+        <div
+          className="project-side reveal"
+          ref={(el) => (sectionsRef.current[2] = el)}
+        >
           <h3>Tech Stack</h3>
           <div className="detail-badges">
             {data.tech.map((t) => (
@@ -137,10 +170,6 @@ compared to the classical ACO algorithm.
           >
             View GitHub →
           </a>
-
-          <div className="placeholder">
-            Project screenshots<br />coming soon
-          </div>
         </div>
       </div>
     </section>

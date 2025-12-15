@@ -8,13 +8,29 @@
   color: #e4e6eb;
 }
 
+/* Back button */
+.back-btn {
+  background: none;
+  border: none;
+  color: #9bb3ff;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.back-btn:hover {
+  color: #cdd7ff;
+}
+
+/* Title */
 #project-details h2 {
   text-align: center;
   color: #c8d4ff;
   margin-bottom: 50px;
 }
 
-/* TWO COLUMN LAYOUT */
+/* Layout */
 .project-layout {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -79,17 +95,19 @@
   transform: translateX(4px);
 }
 
-.placeholder {
-  margin-top: 20px;
-  padding: 18px;
-  border: 1px dashed #3b4264;
-  border-radius: 10px;
-  text-align: center;
-  color: #9aa3c7;
-  font-size: 14px;
+/* ========== SCROLL REVEAL ANIMATION ========== */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
 }
 
-/* MOBILE */
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Mobile */
 @media (max-width: 900px) {
   .project-layout {
     grid-template-columns: 1fr;

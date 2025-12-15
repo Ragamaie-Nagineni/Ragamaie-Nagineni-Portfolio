@@ -75,12 +75,12 @@ export default function Projects() {
             <h4>Overview</h4>
             <p className="description">{p.overview}</p>
 
-            <h4>Features</h4>
+           {/*  <h4>Features</h4>
             <ul className="feature-list">
               {p.features.map((f) => (
                 <li key={f}>{f}</li>
               ))}
-            </ul>
+            </ul> */}
 
             <h4>Tech Stack</h4>
             <div className="tech-stack">
