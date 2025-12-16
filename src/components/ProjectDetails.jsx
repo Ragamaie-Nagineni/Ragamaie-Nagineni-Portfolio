@@ -8,6 +8,7 @@ export default function ProjectDetails() {
   const { id } = useParams();
   const navigate = useNavigate();
   const sectionsRef = useRef([]);
+  const BASE = import.meta.env.BASE_URL;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -48,7 +49,15 @@ while the backend manages encryption keys, authorization flow, and secure file r
       ],
       tech: ["AES", "AWS S3", "Node.js", "Express", "MongoDB"],
       github:
-        "https://github.com/Ragamaie-Nagineni/Hybrid-Secure-Cloud-Storage-using-AES--hybrid-Symmetric-Encryption-and-AWS-Integration"
+        "https://github.com/Ragamaie-Nagineni/Hybrid-Secure-Cloud-Storage-using-AES--hybrid-Symmetric-Encryption-and-AWS-Integration",
+      images: [
+        `${BASE}projects/AWS-security/aws-dynamo-db.png`,
+        `${BASE}projects/AWS-security/less-data-console.png`,
+        `${BASE}projects/AWS-security/more-data-console.png`
+      ]
+
+
+
     },
 
     drakz: {
@@ -92,7 +101,12 @@ volatility, and prediction accuracy.
         "Comparative performance analysis of ML models"
       ],
       tech: ["Python", "Pandas", "NumPy", "Scikit-learn", "Matplotlib"],
-      github: "https://github.com/Ragamaie-Nagineni/Netflix-Stock-Predictor"
+      github: "https://github.com/Ragamaie-Nagineni/Netflix-Stock-Predictor",
+      images: [
+        `${BASE}projects/Netflix-Stock-predictor/ACCURACY.png`,
+        `${BASE}projects/Netflix-Stock-predictor/heatmap.png`
+      ]
+
     },
 
     aco: {
@@ -115,18 +129,25 @@ compared to the classical ACO algorithm.
       ],
       tech: ["Python", "Scikit-learn", "Machine Learning", "Optimization"],
       github:
-        "https://github.com/Ragamaie-Nagineni/improved-Multirace_AntColony_ParallelChoas_Search"
+        "https://github.com/Ragamaie-Nagineni/improved-Multirace_AntColony_ParallelChoas_Search",
+      images: [
+        `${BASE}projects/ant-colony/comparison.png`,
+        `${BASE}projects/ant-colony/path-improved.png`,
+        `${BASE}projects/ant-colony/pheromone-trail.png`
+      ]
+
+
     }
   };
 
-   const data = projectData[id];
+  const data = projectData[id];
   if (!data) return <h2 className="not-found">Project Not Found</h2>;
 
   return (
     <section id="project-details">
       {/* Back navigation */}
       <button className="back-btn" onClick={() => navigate("/#projects")}>
-        ← Back to Projects
+        ← Back to Main page
       </button>
 
       <h2 ref={(el) => (sectionsRef.current[0] = el)} className="reveal">
@@ -172,6 +193,24 @@ compared to the classical ACO algorithm.
           </a>
         </div>
       </div>
+
+      {/* PROJECT IMAGES */}
+      {data.images && (
+        <>
+          <h3 style={{ marginTop: "50px" }}>Project Visuals</h3>
+          <div className="project-images">
+            {data.images.map((img, index) => (
+              <img
+                key={index}
+                src={img}
+                alt="Project screenshot"
+                className="project-image"
+              />
+            ))}
+          </div>
+        </>
+      )}
+
     </section>
   );
 }

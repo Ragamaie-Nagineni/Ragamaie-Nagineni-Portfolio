@@ -7,7 +7,7 @@ export default function Hero() {
 
         <div className="btn-box">
           <a href="#projects" className="btn primary">View Projects</a>
-          <a href="/resume.pdf" download className="btn secondary">Resume</a>
+          <a href="/resume.pdf" download className="btn secondary">Download Resume</a>
         </div>
       </div>
     </section>

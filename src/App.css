@@ -78,7 +78,7 @@ ul li::before {
   left: 0;
   z-index: 1000;
   background: #0e1324;
-  padding: 14px 0;
+  padding: 10px 0;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
 }
 
