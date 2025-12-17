@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {  HashRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -16,7 +16,7 @@ import "./App.css";
 
 function App() {
   return (
-    <BrowserRouter basename="/Ragamaie-Nagineni-Portfolio">
+    < HashRouter basename="/Ragamaie-Nagineni-Portfolio">
       <Navbar />
 
       <Routes>
@@ -45,7 +45,7 @@ function App() {
       <footer>
         © {new Date().getFullYear()} Ragamaie Nagineni. All Rights Reserved.
       </footer>
-    </BrowserRouter>
+    </ HashRouter>
   );
 }
 
