@@ -14,9 +14,24 @@ import ProjectDetails from "./components/ProjectDetails";
 
 import "./App.css";
 
+/* import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+} */
+
+
 function App() {
   return (
     <HashRouter>
+     {/*  <ScrollToTop/> */}
       <Navbar />
 
       <Routes>

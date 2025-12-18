@@ -23,7 +23,7 @@ export default function ProjectDetails() {
     );
 
     sectionsRef.current.forEach((el) => el && observer.observe(el));
-
+     window.scrollTo(0, 0);
     return () => observer.disconnect();
   }, []);
 

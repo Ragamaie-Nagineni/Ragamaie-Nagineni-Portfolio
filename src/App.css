@@ -16,6 +16,7 @@ body {
 section {
   width: 100%;
   padding: 90px 10%;
+   scroll-margin-top: 80px;
 }
 
 /* Subtle alternating backgrounds */
@@ -61,14 +62,14 @@ ul li {
   list-style: none;
   position: relative;
 }
-
-ul li::before {
+ 
+/* ul li::before {
   content: "▹";
   position: absolute;
   left: 0;
   color: #6f8cff;
   font-weight: bold;
-}
+}  */
 
 /* ================== NAVBAR ================== */
 .navbar {
@@ -77,32 +78,39 @@ ul li::before {
   top: 0;
   left: 0;
   z-index: 1000;
-  background: #0e1324;
-  padding: 10px 0;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+
+  height: 80px; /* keep */
+  background: linear-gradient(180deg, #0e1324, #0b0f19);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.45);
 }
 
 .nav-container {
+  height: 100%;              /* IMPORTANT */
   width: 88%;
   margin: auto;
+
   display: flex;
+  align-items: center;       /* vertical centering */
   justify-content: space-between;
-  align-items: center;
 }
+
 
 .logo {
   font-size: 22px;
   font-weight: 700;
   color: #6f8cff;
+  /* margin-top:20px; */
+   /* line-height: 1;  */
 }
 
-.navbar ul {
+ /* .navbar ul {
   list-style: none;
   display: flex;
-  gap: 25px;
-}
-
-.navbar ul li a {
+  gap: 15px;
+  margin-top:0px;
+} */
+ 
+/* .navbar ul li a {
   text-decoration: none;
   color: #d9dcdf;
   font-weight: 500;
@@ -111,7 +119,32 @@ ul li::before {
 
 .navbar ul li a:hover {
   color: #8fa3ff;
+} */
+
+ .navbar ul {
+  display: flex;
+  gap: 18px;
+  align-items: center;
 }
+
+.navbar button {
+  background: transparent;
+  border: none;
+  color: #d9dcdf;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.navbar button:hover {
+  background: rgba(111,140,255,0.15);
+  color: #8fa3ff;
+}
+
 
 /* ================== HERO ================== */
 .hero {
