@@ -8,7 +8,7 @@ export default function Hero() {
 
         <div className="btn-box">
           <a href="#projects" className="btn primary">View Projects</a>
-          <a href={`${BASE}Resume.pdf`} download>
+          <a href={`${BASE}Resume.pdf`} download className="btn secondary">
             Download Resume
           </a>
         </div>

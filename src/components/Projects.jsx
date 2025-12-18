@@ -69,13 +69,13 @@ export default function Projects() {
       <div className="projects-grid">
         {projects.map((p) => (
           <div className="project-card" key={p.id}>
-            
+
             <h3>{p.title}</h3>
 
             <h4>Overview</h4>
             <p className="description">{p.overview}</p>
 
-           {/*  <h4>Features</h4>
+            {/*  <h4>Features</h4>
             <ul className="feature-list">
               {p.features.map((f) => (
                 <li key={f}>{f}</li>
@@ -89,9 +89,10 @@ export default function Projects() {
               ))}
             </div>
 
-            <a href={`/Ragamaie-Nagineni-Portfolio/project/${p.id}`} className="project-link">
+            <a href={`#/project/${p.id}`} className="project-link">
               View project →
             </a>
+
           </div>
         ))}
       </div>

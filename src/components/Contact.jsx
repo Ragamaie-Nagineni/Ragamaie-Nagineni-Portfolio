@@ -14,7 +14,9 @@ export default function Contact() {
         </p>
 
         <div className="contact-links">
-          <a href="mailto:ragamaie@email.com">ragamaie.n@gmail.com</a>
+          <a href="mailto:ragamaie@email.com">
+            <FaEnvelope/>
+            ragamaie.n@gmail.com</a>
 
           <a
             href="https://www.linkedin.com/in/ragamaie-nagineni-9a3829293/"
