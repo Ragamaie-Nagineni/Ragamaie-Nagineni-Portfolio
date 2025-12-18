@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+import {  HashRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -16,11 +16,11 @@ import "./App.css";
 
 function App() {
   return (
-    <HashRouter>
+    < HashRouter basename="/Ragamaie-Nagineni-Portfolio">
       <Navbar />
 
       <Routes>
-        {/* HOME */}
+        {/* HOME PAGE */}
         <Route
           path="/"
           element={
@@ -38,14 +38,14 @@ function App() {
           }
         />
 
-        {/* PROJECT DETAILS */}
+        {/* PROJECT DETAILS PAGE */}
         <Route path="/project/:id" element={<ProjectDetails />} />
       </Routes>
 
       <footer>
         © {new Date().getFullYear()} Ragamaie Nagineni. All Rights Reserved.
       </footer>
-    </HashRouter>
+    </ HashRouter>
   );
 }
 
