@@ -13,13 +13,14 @@ export default function Resume() {
         </p>
 
         <a
-          href="/Ragamaie-Nagineni-Portfolio/public/Resume.pdf"
+          href={`${import.meta.env.BASE_URL}Resume.pdf`}
           target="_blank"
           rel="noopener noreferrer"
           className="resume-btn"
         >
           View Resume →
         </a>
+
       </div>
     </section>
   );
