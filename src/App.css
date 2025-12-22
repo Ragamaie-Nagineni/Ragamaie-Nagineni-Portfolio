@@ -206,7 +206,7 @@ ul li {
 }
 
 /* ================== SKILLS ================== */
-#skills h3 {
+/* #skills h3 {
   color: #9bb3ff;
   margin-bottom: 8px;
 }
@@ -216,7 +216,7 @@ ul li {
   column-gap: 40px;
 }
 
-/* Skill badges */
+
 .badge {
   background: #232a47;
   padding: 6px 12px;
@@ -224,6 +224,35 @@ ul li {
   border-radius: 6px;
   color: #cdd3ff;
   border: 1px solid #3b4264;
+} */
+
+
+/* Layout */
+.skills-layout {
+  display: flex;
+  gap: 80px;
+}
+
+/* Columns */
+.skills-col {
+  flex: 1;
+}
+
+/* Headings */
+#skills h3 {
+  color: #9bb3ff;
+  margin: 20px 0 6px;
+}
+
+/* Text */
+#skills p,
+#skills ul {
+  margin: 0;
+  color: #e0e4ff;
+}
+
+#skills ul {
+  padding-left: 18px;
 }
 
 /* ================== RESUME SECTION ================== */
