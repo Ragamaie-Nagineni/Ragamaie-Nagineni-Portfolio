@@ -11,7 +11,7 @@ import Extracurricular from "./components/Extracurricular";
 import Resume from "./components/Resume";
 import Contact from "./components/Contact";
 import ProjectDetails from "./components/ProjectDetails";
-
+import useScrollReveal from "./hooks/useScrollReveal";
 import "./App.css";
 
 /* import { useEffect } from "react";
@@ -29,6 +29,7 @@ function ScrollToTop() {
 
 
 function App() {
+  useScrollReveal();
   return (
     <HashRouter>
      {/*  <ScrollToTop/> */}

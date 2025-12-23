@@ -2,8 +2,8 @@ import { FaGraduationCap } from "react-icons/fa";
 
 export default function Education() {
   return (
-    <section id="education">
-      <h2><FaGraduationCap /> Education</h2>
+    <section id="education" className="reveal">
+      <h2 className="reveal"><FaGraduationCap /> Education</h2>
 
       <div className="container">
 

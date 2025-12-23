@@ -2,8 +2,8 @@
 
 export default function Resume() {
   return (
-    <section id="resume">
-      <h2>Resume</h2>
+    <section id="resume" className="reveal">
+      <h2 className="reveal">Resume</h2>
 
       <div className="resume-box">
         <h3>Want to know more about my work?</h3>

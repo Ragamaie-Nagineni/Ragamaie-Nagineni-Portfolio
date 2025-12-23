@@ -4,8 +4,8 @@ import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function Contact() {
   return (
-    <section id="contact">
-      <h2>Contact Me</h2>
+    <section id="contact" className="reveal">
+      <h2 className="reveal">Contact Me</h2>
 
       <div className="contact-box">
         <p>

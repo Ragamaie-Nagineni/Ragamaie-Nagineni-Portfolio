@@ -225,35 +225,77 @@ ul li {
   color: #cdd3ff;
   border: 1px solid #3b4264;
 } */
+/* ================== SKILLS SECTION ================== */
 
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  max-width: 1100px;
+  margin: 50px auto 0;
+}
 
-/* Layout */
-.skills-layout {
+/* Card */
+.skill-card {
+  background: linear-gradient(145deg, #141a33, #1b2242);
+  border: 1px solid #2a3155;
+  border-radius: 16px;
+  padding: 22px 24px;
+
   display: flex;
-  gap: 80px;
+  flex-direction: column;
+  gap: 10px;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Columns */
-.skills-col {
-  flex: 1;
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(120, 160, 255, 0.25);
 }
 
-/* Headings */
-#skills h3 {
-  color: #9bb3ff;
-  margin: 20px 0 6px;
+/* Icon */
+.skill-icon {
+  font-size: 22px;
+  color: #8fa3ff;
+  opacity: 0.9;
 }
 
-/* Text */
-#skills p,
-#skills ul {
-  margin: 0;
-  color: #e0e4ff;
+/* Title */
+.skill-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #dbe3ff;
+  margin: 2px 0 6px;
 }
 
-#skills ul {
-  padding-left: 18px;
+/* Content text */
+.skill-card p {
+  font-size: 14px;
+  line-height: 1.55;
+  color: #cfd6ff;
 }
+
+/* Make multiline content breathe */
+.skill-card p br {
+  display: block;
+  content: "";
+  margin-bottom: 4px;
+}
+
+/* ================== RESPONSIVE ================== */
+
+@media (max-width: 768px) {
+  .skills-grid {
+    gap: 22px;
+  }
+
+  .skill-card {
+    padding: 20px;
+  }
+}
+
+
 
 /* ================== RESUME SECTION ================== */
 
@@ -378,4 +420,85 @@ footer {
     display: none;
   }
 }
+/* ================== SCROLL REVEAL ANIMATIONS ================== */
 
+/* Base hidden state */
+.reveal {
+  opacity: 1;                
+  transform: none;
+}
+
+
+/* When visible */
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+/* Optional variations */
+.reveal-left {
+  transform: translateX(-30px);
+}
+
+.reveal-right {
+  transform: translateX(30px);
+}
+
+.reveal-visible.reveal-left,
+.reveal-visible.reveal-right {
+  transform: translateX(0);
+}
+/* ===== ADVANCED REVEAL ANIMATIONS ===== */
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.92);
+}
+
+.reveal-visible.reveal-scale {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+/* Stagger children */
+.stagger > * {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.stagger.reveal-visible > * {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.stagger.reveal-visible > *:nth-child(1) { transition-delay: 0.1s; }
+.stagger.reveal-visible > *:nth-child(2) { transition-delay: 0.2s; }
+.stagger.reveal-visible > *:nth-child(3) { transition-delay: 0.3s; }
+.stagger.reveal-visible > *:nth-child(4) { transition-delay: 0.4s; }
+.stagger.reveal-visible > *:nth-child(5) { transition-delay: 0.5s; }
+/*h2*/
+h2.reveal {
+  transform: translateY(30px);
+}
+
+h2.reveal-visible {
+  transform: translateY(0);
+  transition: all 0.6s ease;
+}
+
+/**/
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(120,160,255,0.2), transparent 60%);
+  animation: floatBg 10s infinite alternate;
+}
+
+@keyframes floatBg {
+  from { transform: translateY(0); }
+  to { transform: translateY(-30px); }
+}

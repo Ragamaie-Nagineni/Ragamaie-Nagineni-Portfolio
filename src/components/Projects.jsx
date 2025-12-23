@@ -63,8 +63,8 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects">
-      <h2><FaLaptopCode /> Projects</h2>
+    <section id="projects" className="reveal">
+      <h2 className="reveal"><FaLaptopCode /> Projects</h2>
 
       <div className="projects-grid">
         {projects.map((p) => (

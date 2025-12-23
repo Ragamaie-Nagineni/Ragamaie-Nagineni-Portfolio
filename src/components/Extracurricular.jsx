@@ -2,8 +2,8 @@
 import { FaUsers } from "react-icons/fa";
 export default function Extracurricular() {
   return (
-    <section id="extracurricular">
-      <h2><FaUsers /> Extracurricular & Volunteering</h2>
+    <section id="extracurricular"className="reveal">
+      <h2 className="reveal"><FaUsers /> Extracurricular & Volunteering</h2>
       <div className="container">
         <h3>PR Core Member, Epoch Club (Aug 2024 – Apr 2025)</h3>
         <ul>

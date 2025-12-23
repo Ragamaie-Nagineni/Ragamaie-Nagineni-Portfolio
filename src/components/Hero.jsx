@@ -1,7 +1,7 @@
 const BASE = import.meta.env.BASE_URL;
 export default function Hero() {
   return (
-    <section id="hero" className="hero">
+    <section id="hero"  className="hero reveal">
       <div className="hero-box">
         <h1> <span>Ragamaie Nagineni</span></h1>
         <p>Computer Science Undergraduate • Web Developer • Cloud Computing Enthusiast</p>

@@ -2,8 +2,8 @@ import { FaBriefcase } from "react-icons/fa";
 
 export default function Experience() {
   return (
-    <section id="experience">
-      <h2><FaBriefcase /> Experience & Involvement</h2>
+    <section id="experience" className="reveal">
+      <h2 className="reveal"><FaBriefcase /> Experience & Involvement</h2>
 
       <div className="container job">
         <h3>Web Development Trainee</h3>
