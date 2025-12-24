@@ -16,7 +16,7 @@ body {
 section {
   width: 100%;
   padding: 90px 10%;
-   scroll-margin-top: 80px;
+  scroll-margin-top: 80px;
 }
 
 /* Subtle alternating backgrounds */
@@ -490,13 +490,7 @@ h2.reveal-visible {
 }
 
 /**/
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at top right, rgba(120,160,255,0.2), transparent 60%);
-  animation: floatBg 10s infinite alternate;
-}
+
 
 @keyframes floatBg {
   from { transform: translateY(0); }
