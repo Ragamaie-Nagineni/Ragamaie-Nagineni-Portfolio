@@ -146,9 +146,10 @@ compared to the classical ACO algorithm.
   return (
     <section id="project-details">
       {/* Back navigation */}
-      <button className="back-btn" onClick={() => navigate("/#projects")}>
-        ← Back to Main page
-      </button>
+      <button className="back-btn" onClick={() => navigate(-1)}>
+     ← Back to Projects
+     </button>
+
 
       <h2 ref={(el) => (sectionsRef.current[0] = el)} className="reveal">
         {data.title}
