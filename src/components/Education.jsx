@@ -9,7 +9,7 @@ export default function Education() {
 
         <h3>B.Tech in Computer Science & Engineering</h3>
         <p><b>Indian Institute of Information Technology, Sri City</b> (2023 - 2027)</p>
-        <p><b>CGPA:</b> 7.3*</p>
+        {/* <p><b>CGPA:</b> 7.3*</p> */}
       
         <ul>
           <li>Learning core CS foundations including DSA, DBMS, OS, OOPS, and Computer Networks</li>
