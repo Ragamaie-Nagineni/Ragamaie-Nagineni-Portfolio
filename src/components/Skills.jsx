@@ -103,7 +103,7 @@ export default function Skills() {
     <FaBrain className="skill-icon" />
     <h3>Core & Advanced Subjects</h3>
     <p>
-      DSA, OS, DBMS, OOPS<br />
+      DSA, OS, DBMS, OOPS,Computer Networks<br />
       Cloud Computing (AWS Basics)<br />
       Fundamentals of Quantum Computing
     </p>
