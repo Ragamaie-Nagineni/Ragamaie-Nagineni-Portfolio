@@ -13,72 +13,76 @@ export default function ProjectsPage() {
 
     <section className="reveal projects-page">
 
-      <h2 className="reveal">
-        <FaLaptopCode /> All Projects
-      </h2>
+      <div className="projects-page-container">
 
-      <div className="projects-grid">
+        <h2 className="reveal">
+          <FaLaptopCode /> All Projects
+        </h2>
 
-        {projects.map((p) => (
+        <div className="projects-grid">
 
-          <div className="project-card" key={p.id}>
+          {projects.map((p) => (
 
-            <h3>{p.title}</h3>
+            <div className="project-card" key={p.id}>
 
-            <h4>Overview</h4>
+              <h3>{p.title}</h3>
 
-            <p className="description">
-              {p.overview}
-            </p>
+              <h4>Overview</h4>
 
-            {/* FEATURES */}
+              <p className="description">
+                {p.overview}
+              </p>
 
-            {/*
+              {/* FEATURES */}
 
-            <h4>Features</h4>
+              {/*
 
-            <ul className="feature-list">
-              {p.features.map((f) => (
-                <li key={f}>{f}</li>
-              ))}
-            </ul>
+              <h4>Features</h4>
 
-            */}
+              <ul className="feature-list">
+                {p.features.map((f) => (
+                  <li key={f}>{f}</li>
+                ))}
+              </ul>
 
-            <h4>Tech Stack</h4>
+              */}
 
-            <div className="tech-stack">
+              <h4>Tech Stack</h4>
 
-              {p.tech.map((t) => (
+              <div className="tech-stack">
 
-                <span key={t} className="badge">
-                  {t}
-                </span>
+                {p.tech.map((t) => (
 
-              ))}
+                  <span key={t} className="badge">
+                    {t}
+                  </span>
+
+                ))}
+
+              </div>
+
+              <a
+                href={`#/project/${p.id}`}
+                className="project-link"
+              >
+                View project →
+              </a>
 
             </div>
 
-            <a
-              href={`#/project/${p.id}`}
-              className="project-link"
-            >
-              View project →
-            </a>
+          ))}
 
-          </div>
+        </div>
 
-        ))}
+        {/* BACK BUTTON */}
 
-      </div>
+        <div className="view-all-container">
 
-      {/* BACK BUTTON */}
+          <Link to="/" className="view-all-btn">
+            ← Back to Home
+          </Link>
 
-      <div className="view-all-container">
-
-        <Link to="/" className="view-all-btn">
-          ← Back to Home
-        </Link>
+        </div>
 
       </div>
 

@@ -11,7 +11,11 @@ import Extracurricular from "./components/Extracurricular";
 import Resume from "./components/Resume";
 import Contact from "./components/Contact";
 import ProjectDetails from "./components/ProjectDetails";
+
+import ProjectsPage from "./pages/ProjectsPage";
+
 import useScrollReveal from "./hooks/useScrollReveal";
+
 import "./App.css";
 
 /* import { useEffect } from "react";
@@ -25,43 +29,68 @@ function ScrollToTop() {
   }, [pathname]);
 
   return null;
-} */
+}
+*/
 
+function HomePage() {
+  return (
+    <>
+      <Hero />
+      <About />
+      <Education />
+      <Skills />
+      <Experience />
+      <Projects />
+      <Extracurricular />
+      <Resume />
+      <Contact />
+    </>
+  );
+}
 
 function App() {
+
   useScrollReveal();
+
   return (
+
     <HashRouter>
-     {/*  <ScrollToTop/> */}
+
+      {/* <ScrollToTop /> */}
+
       <Navbar />
 
       <Routes>
-        {/* HOME */}
+
+        {/* HOME PAGE */}
+
         <Route
           path="/"
-          element={
-            <>
-              <Hero />
-              <About />
-              <Education />
-              <Skills />
-              <Experience />
-              <Projects />
-              <Extracurricular />
-              <Resume />
-              <Contact />
-            </>
-          }
+          element={<HomePage />}
+        />
+
+        {/* ALL PROJECTS PAGE */}
+
+        <Route
+          path="/projects"
+          element={<ProjectsPage />}
         />
 
         {/* PROJECT DETAILS */}
-        <Route path="/project/:id" element={<ProjectDetails />} />
+
+        <Route
+          path="/project/:id"
+          element={<ProjectDetails />}
+        />
+
       </Routes>
 
       <footer>
         © {new Date().getFullYear()} Ragamaie Nagineni. All Rights Reserved.
       </footer>
+
     </HashRouter>
+
   );
 }
 
