@@ -71,7 +71,7 @@ export default function Skills() {
     <h3>Web Development</h3>
     <p>
       Frontend: HTML, CSS, JavaScript, React<br />
-      Backend: Node.js, Express
+      Backend: Node.js, Express, middlewares, Rest-apis , Graphql , CI/CD
     </p>
   </div>
 
@@ -94,8 +94,8 @@ export default function Skills() {
     <FaTools className="skill-icon" />
     <h3>Tools & Libraries</h3>
     <p>
-      Git, GitHub, SQL<br />
-      Pandas, Scikit-learn, Matplotlib
+      Git, GitHub, SQL, Swagger<br />
+      Pandas, Scikit-learn, Matplotlib 
     </p>
   </div>
 
