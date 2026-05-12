@@ -97,3 +97,35 @@
   color: #cdd7ff;
   transform: translateX(4px);
 }
+
+.view-all-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.view-all-btn {
+  padding: 14px 28px;
+  border-radius: 12px;
+
+  background: rgba(90, 120, 255, 0.12);
+
+  border: 1px solid rgba(120, 140, 255, 0.3);
+
+  color: #7f8cff;
+
+  text-decoration: none;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.view-all-btn:hover {
+  background: rgba(90, 120, 255, 0.2);
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 0 18px rgba(100, 120, 255, 0.25);
+}
