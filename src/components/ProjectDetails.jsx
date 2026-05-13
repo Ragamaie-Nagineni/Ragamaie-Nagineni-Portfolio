@@ -27,7 +27,7 @@ export default function ProjectDetails() {
     return () => observer.disconnect();
   }, []);
 
-  const projectData = {
+/*   const projectData = {
     "cloud-storage": {
       title: "Hybrid Secure Cloud Storage System",
       overview: `
@@ -138,7 +138,114 @@ compared to the classical ACO algorithm.
 
 
     }
-  };
+  }; */
+  const projectData = {
+
+  drakz: {
+    title: "DRAKZ — Full Stack Web Application",
+    overview: `
+DRAKZ is a full-stack application developed as part of IIIT coursework. 
+It includes secure authentication, modular backend APIs, and dashboard-driven UI.
+
+The project emphasizes clean architecture and separation of concerns. 
+The frontend ensures a smooth user experience, while the backend handles 
+validation, sessions, and business logic using a RESTful architecture.
+    `,
+    features: [
+      "Secure authentication & session handling",
+      "Dashboard-based modular UI",
+      "RESTful backend API architecture",
+      "Responsive and mobile-friendly design"
+    ],
+    tech: ["React", "Node.js", "Express", "MongoDB", "CSS"],
+    github: "https://github.com/Ragamaie-Nagineni/DRKZ-1"
+  },
+
+  "iot-fog-cloud-scheduler": {
+    title: "IoT Fog Cloud Scheduler",
+    overview: `
+Simulation-based implementation of energy-aware task offloading and 
+network-aware cloud scheduling in IoT-Fog-Cloud environments using iFogSim.
+
+The project focuses on optimizing resource utilization, minimizing latency, 
+and improving energy efficiency in distributed cloud systems.
+    `,
+    features: [
+      "Energy-aware task scheduling",
+      "Network-aware optimization",
+      "Cloud-Fog-IoT integration",
+      "Simulation using iFogSim",
+      "Performance evaluation metrics"
+    ],
+    tech: ["Java", "iFogSim", "Cloud Computing", "IoT"],
+    github:
+      "https://github.com/Ragamaie-Nagineni/IoT-Fog-Cloud-energy-aware-task-offloading-and-network-aware-scheduling-using-iFogSim"
+  },
+
+  "uav-isac-optimization": {
+    title: "UAV ISAC Optimization",
+    overview: `
+A UAV-assisted Integrated Sensing and Communications optimization system 
+using fairness-constrained scheduling and multi-objective Pareto optimization.
+
+The project improves communication efficiency and resource allocation 
+for UAV-assisted IoT systems.
+    `,
+    features: [
+      "Pareto optimization",
+      "Fairness-constrained scheduling",
+      "Wireless communication optimization",
+      "IoT-assisted UAV systems",
+      "Multi-objective resource allocation"
+    ],
+    tech: ["Python", "Optimization", "IoT", "Wireless Networks"],
+    github:
+      "https://github.com/Ragamaie-Nagineni/UAV-ISAC-Optimization"
+  },
+
+  "netflix-stock": {
+    title: "Netflix Stock Data Analytics",
+    overview: `
+This project performs long-term analysis of Netflix stock prices using 
+machine learning regression techniques.
+
+Multiple models such as Linear Regression, Random Forest, and Support Vector 
+Regression are compared using performance metrics like Mean Squared Error (MSE) 
+and R² score.
+    `,
+    features: [
+      "20+ years of stock data analysis",
+      "Regression model comparison",
+      "Trend visualization",
+      "Performance evaluation",
+      "Machine learning forecasting"
+    ],
+    tech: ["Python", "Pandas", "NumPy", "Scikit-learn", "Matplotlib"],
+    github:
+      "https://github.com/Ragamaie-Nagineni/Netflix-Stock-Predictor"
+  },
+
+  macpcs: {
+    title: "MACPCS Optimization",
+    overview: `
+Enhanced Multi-Race Ant Colony Parallel Chaos Search optimization algorithm 
+for intelligent path planning and optimization.
+
+The project improves exploration efficiency and convergence compared to 
+traditional ACO methods.
+    `,
+    features: [
+      "Parallel chaos search",
+      "ACO enhancement",
+      "Path optimization",
+      "Performance comparison",
+      "Optimization experimentation"
+    ],
+    tech: ["Python", "ACO", "Optimization", "Algorithms"],
+    github:
+      "https://github.com/Ragamaie-Nagineni/improved-Multirace_AntColony_ParallelChoas_Search"
+  }
+};
 
   const data = projectData[id];
   if (!data) return <h2 className="not-found">Project Not Found</h2>;

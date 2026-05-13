@@ -61,12 +61,12 @@ export default function ProjectsPage() {
 
               </div>
 
-              <a
-                href={`#/project/${p.id}`}
+              <Link
+                to={`/project/${p.id}`}
                 className="project-link"
               >
                 View project →
-              </a>
+              </Link>
 
             </div>
 
