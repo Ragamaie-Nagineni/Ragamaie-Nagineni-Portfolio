@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import "./ProjectDetails.css";
+import "../styles/ProjectDetails.css";
 
 export default function ProjectDetails() {
   const { id } = useParams();
