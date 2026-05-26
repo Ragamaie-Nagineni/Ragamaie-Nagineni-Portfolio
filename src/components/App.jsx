@@ -1,22 +1,22 @@
 import { HashRouter, Routes, Route } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Education from "./components/Education";
-import Skills from "./components/Skills";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
-import Extracurricular from "./components/Extracurricular";
-import Resume from "./components/Resume";
-import Contact from "./components/Contact";
-import ProjectDetails from "./components/ProjectDetails";
+import Navbar from "./Navbar";
+import Hero from "./Hero";
+import About from "./About";
+import Education from "./Education";
+import Skills from "./Skills";
+import Experience from "./Experience";
+import Projects from "./Projects";
+import Extracurricular from "./Extracurricular";
+import Resume from "./Resume";
+import Contact from "./Contact";
+import ProjectDetails from "./ProjectDetails";
 
-import ProjectsPage from "./pages/ProjectsPage";
+import ProjectsPage from "../pages/ProjectsPage";
 
-import useScrollReveal from "./hooks/useScrollReveal";
+import useScrollReveal from "../hooks/useScrollReveal";
 
-import "./App.css";
+import "../styles/App.css";
 
 
 

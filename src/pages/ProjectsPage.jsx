@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 import projects from "../data/projectsData";
 
-import "../components/Projects.css";
+import "../styles/Projects.css";
 
 export default function ProjectsPage() {
 
