@@ -31,7 +31,7 @@ export default function Projects() {
             <h4>Overview</h4>
 
             <p className="description">
-              {p.overview}
+              {p.shortDescription}
             </p>
 
             {/* FEATURES */}
